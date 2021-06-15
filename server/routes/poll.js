@@ -1,9 +1,10 @@
 const { Router } = require("express");
 
-const { createPoll, votedPolls } = require("../controllers/poll");
+const { createPoll, votedPolls, pollID,chartPoll  } = require("../controllers/poll");
 const auth = require("../Middlewares/Authenticate");
 
 router = Router();
+
 
 router.post(
   "/poll",
@@ -15,6 +16,11 @@ router.post(
   createPoll
 );
 
+router.get('/poll/:pID', pollID);
+
+
 router.get("/poll/voted", auth, votedPolls);
+
+router.post('/poll/:pID/new', chartPoll);
 
 module.exports = router;

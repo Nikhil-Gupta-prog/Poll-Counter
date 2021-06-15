@@ -1,6 +1,6 @@
 const { verify } = require("jsonwebtoken");
 
-const User = require("../models/Users");
+const User = require("../models/user.js");
 
 const auth = async (req, res, next) => {
   try {

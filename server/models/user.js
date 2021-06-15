@@ -41,7 +41,7 @@ var userSchema = new mongoose.Schema(
     salt: String,
     polls: [
       {
-        poll: { type: Schema.Types.ObjectId, required: true, ref: "Poll" },
+        poll: { type: mongoose.Types.ObjectId, required: true, ref: "Poll" },
         choice: {
           type: Number,
           required: true,
