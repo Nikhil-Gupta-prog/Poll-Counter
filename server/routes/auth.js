@@ -16,8 +16,8 @@ router.post(
     check("email", "email is required").isEmail(),
     check(
       "password",
-      "password should be minium 4 char and max 9 char"
-    ).isLength({ min: 4, max: 9 }),
+      "password should be minimum 4 char long"
+    ).isLength({ min: 4,}),
   ],
   signup
 );
@@ -28,9 +28,8 @@ router.post(
   "/signin",
   [
     check("email", "email is required").isEmail(),
-    check("password", "password field is required").isLength({
+    check("password", "password field is required and should be at least 4 char long").isLength({
       min: 4,
-      max: 9,
     }),
   ],
   signin

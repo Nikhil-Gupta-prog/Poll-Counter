@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "c3e0ff0e-8e0d-4765-be21-50a7278ae234",
+		"name": "Poll-Counter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"harjeet\",\r\n    \"lastname\" : \"singh\",\r\n    \"email\" : \"harjeet@gg.com\",\r\n    \"phone\" : 89843456531,\r\n    \"password\" : \"harry123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/signup",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"harry@gg.com\",\r\n    \"password\" : \"harry123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/signin",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Voted Polls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/poll/votes",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"poll",
+						"votes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log Out",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/user/signout",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"signout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Poll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"How many automobiles do you have at your home ?\",\r\n    \"shortName\" : \"No of automobiles\",\r\n    \"choices\" : [{\"index\" : 1, \"choice\": \"One\"}, {\"index\" : 2, \"choice\": \"Two\"}, {\"index\" : 3, \"choice\": \"Three\"}, {\"index\" : 4, \"choice\": \"Four\"}, {\"index\" : 5, \"choice\": \"More than four\"}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/poll/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"poll",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cast Vote",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\" : \"60d6080b374fe43334c674dd\",\r\n    \"index\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/poll/votes",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"poll",
+						"votes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  User Polls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/poll/show",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"poll",
+						"show"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

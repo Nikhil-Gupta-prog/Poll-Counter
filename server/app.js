@@ -8,9 +8,11 @@ const cors = require("cors");
 const authRoutes = require("./routes/auth");
 const pollRoutes = require("./routes/poll");
 
+const url = process.env.DATABASE || "mongodb://127.0.0.1:27017/test-poll-db";
+
 // Database Connect
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -26,12 +28,12 @@ app.use(cookieParser());
 app.use(cors());
 
 //Routes
-app.use("/api", authRoutes);
-app.use(pollRoutes);
+app.use("/user", authRoutes);
+app.use("/poll", pollRoutes);
 
 const port = process.env.PORT || 8000;
 
 //Starting a server
 app.listen(port, () => {
-  console.log(`app is running at ${port}`);
+  console.log(`Server is running at Port : ${port}`);
 });
