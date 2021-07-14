@@ -3,10 +3,10 @@ const { Router } = require("express");
 const Poll = require("../controllers/poll");
 const auth = require("../Middlewares/Authenticate");
 
-router = Router();
+const router = Router();
 
 router.post(
-  "/create",
+  "/votes",
   (__, res) => {
     res.status(401).send({
       Error: "Internal Endpoint, Please Refrain from accessing it",
@@ -18,5 +18,6 @@ router.post(
 router.get("/votes", auth, Poll.votedPolls);
 router.patch("/votes", auth, Poll.vote);
 router.get("/show", auth, Poll.showPolls);
+
 
 module.exports = router;

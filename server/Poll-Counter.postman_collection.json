@@ -15,7 +15,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"harjeet\",\r\n    \"lastname\" : \"singh\",\r\n    \"email\" : \"harjeet@gg.com\",\r\n    \"phone\" : 89843456531,\r\n    \"password\" : \"harry123\"\r\n}",
+					"raw": "{\r\n    \"name\" : \"Speedy\",\r\n    \"lastname\" : \"singh\",\r\n    \"email\" : \"sspeedy472@gmail.com\",\r\n    \"phone\" : 89843443524142,\r\n    \"password\" : \"speedy123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -23,12 +23,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/user/signup",
+					"raw": "{{URL}}/signup",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"user",
 						"signup"
 					]
 				}
@@ -56,7 +55,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\" : \"harry@gg.com\",\r\n    \"password\" : \"harry123\"\r\n}",
+					"raw": "{\r\n    \"email\" : \"sspeedy474@gmail.com\",\r\n    \"password\" : \"speedy123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -64,12 +63,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/user/signin",
+					"raw": "{{URL}}/signin",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"user",
 						"signin"
 					]
 				}
@@ -82,12 +80,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/poll/votes",
+					"raw": "{{URL}}/votes",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"poll",
 						"votes"
 					]
 				}
@@ -100,12 +97,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/user/signout",
+					"raw": "{{URL}}/signout",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"user",
 						"signout"
 					]
 				}
@@ -119,7 +115,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\" : \"How many automobiles do you have at your home ?\",\r\n    \"shortName\" : \"No of automobiles\",\r\n    \"choices\" : [{\"index\" : 1, \"choice\": \"One\"}, {\"index\" : 2, \"choice\": \"Two\"}, {\"index\" : 3, \"choice\": \"Three\"}, {\"index\" : 4, \"choice\": \"Four\"}, {\"index\" : 5, \"choice\": \"More than four\"}]\r\n}",
+					"raw": "{\r\n    \"title\" : \"Which side do you support Israel or Palestine ?\",\r\n    \"shortName\" : \"Israel-Palestine Conflict\",\r\n    \"choices\" : [{\"index\" : 1, \"choice\": \"Israel\"}, {\"index\" : 2, \"choice\": \"Palestine\"}, {\"index\" : 3, \"choice\": \"Neutral\"}]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -127,12 +123,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/poll/create",
+					"raw": "{{URL}}/create",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"poll",
 						"create"
 					]
 				}
@@ -154,12 +149,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/poll/votes",
+					"raw": "{{URL}}/votes",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"poll",
 						"votes"
 					]
 				}
@@ -172,12 +166,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/poll/show",
+					"raw": "{{URL}}/show",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"poll",
 						"show"
 					]
 				}

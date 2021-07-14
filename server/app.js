@@ -10,6 +10,12 @@ const pollRoutes = require("./routes/poll");
 
 const url = process.env.DATABASE || "mongodb://127.0.0.1:27017/test-poll-db";
 
+const corsOptions = {
+  origin: 'http://127.0.0.1:3000',
+  credentials: true,
+  optionsSuccessStatus: 200 
+}
+
 // Database Connect
 mongoose
   .connect(url, {
@@ -23,13 +29,14 @@ mongoose
   .catch((err) => console.log(`Can't Connect to DB : ${err}`));
 
 //Middleware
-app.use(express.json());
+app.use(cors(corsOptions));
 app.use(cookieParser());
-app.use(cors());
+app.use(express.json());
+
 
 //Routes
-app.use("/user", authRoutes);
-app.use("/poll", pollRoutes);
+app.use("/api", authRoutes);
+app.use("/api", pollRoutes);
 
 const port = process.env.PORT || 8000;
 
@@ -37,3 +44,6 @@ const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`Server is running at Port : ${port}`);
 });
+
+// "email" : "harry@gg.com",  https://expressjs.com/en/resources/middleware/cors.html
+//     "password" : "harry123"

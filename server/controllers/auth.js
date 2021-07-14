@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const {sendMail} = require("../email");
 const { check, validationResult } = require("express-validator");
 var jwt = require("jsonwebtoken");
 var expressJwt = require("express-jwt");
@@ -15,10 +16,13 @@ exports.signup = (req, res) => {
   }
 
   const user = new User({ ...req.body, polls: [] });
-  user.save((err, user) => {
+  user.save( async (err, user) => {
+    if(user)
+      await sendMail(req.body.name, req.body.email);
+
     if (err) {
       return res.status(400).json({
-        err: "NOT able to save user in DB",
+        err: `NOT able to save user in DB  : ${err}`,
       });
     }
     res.json({
@@ -61,7 +65,7 @@ exports.signin = (req, res) => {
       process.env.SECRET || "littlesecret"
     );
     //put token in cookie
-    res.cookie("token", token, { expire: new Date() + 9999 });
+    res.cookie("token", token, { expire: new Date() + 9999, sameSite:'None' });
 
     user.tokens = user.tokens.concat({ token });
 
