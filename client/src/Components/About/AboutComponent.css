@@ -1,0 +1,70 @@
+.parentAboutDiv{
+    height: auto;
+}
+
+.image_About{
+    width: 100%;
+    height: auto;
+}
+
+.about_description{
+        padding: 1rem;
+        font-size: 3em;
+        font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        position: absolute;
+}
+
+.about_description::after{
+    content: "";
+    position: absolute;
+    width: 8vw;
+    border-bottom: 2px solid;
+    top: 1.6em;
+    right: 20%;
+
+}
+
+.d{
+    margin: 110px 10px;
+}
+p{
+    word-spacing: 4px;
+    font-family:sans-serif;
+    font-size: 1.2em;
+
+}
+
+p.FirstPara::first-letter{
+    color: #38015c;
+    font-size: 3.4em;
+    float: left;
+    display: block;
+    margin: 0 5px 0 0;
+    line-height: 0.8;
+    font-weight: 500;
+}
+p.FirstPara::first-line{
+    color: #38015c;
+    font-weight: bold;
+
+}
+.creator_heading{
+    font-size: 4em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #38015c;
+    text-align: center;
+}
+
+.par{
+    border: 1px solid;
+}
+.chi{
+    border: 1px solid;
+    justify-content: space-around;
+}
+.l{
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+}

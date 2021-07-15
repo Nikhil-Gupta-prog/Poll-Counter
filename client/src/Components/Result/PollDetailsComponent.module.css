@@ -1,0 +1,45 @@
+.parentResultDiv{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+
+}
+
+.childResultDiv{
+    width: 70vw;
+    height: 60vh;
+    border: 1px solid;
+   
+    border-radius: 2px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 30px #5a5a5a,
+                 
+}
+
+.parentFormDiv{
+    margin-top: 10px;
+    padding: 10px;
+}
+h4{
+    padding: 1em;
+}
+.childFormDiv{
+    padding: 7px;
+    margin: 4px 0;
+}
+.childFormDiv input{
+    margin: 0 10px;
+}
+
+.buttonForm{
+    background-color: #7f08bb;
+    color: #fff;
+  
+    margin: 10px 0;
+}
+.buttonForm:hover{
+    color: #fff;
+    background-color: #38015c;
+}

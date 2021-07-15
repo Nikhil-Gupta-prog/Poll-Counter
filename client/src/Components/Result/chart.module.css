@@ -1,0 +1,15 @@
+.chart_css_parent{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: auto;
+
+}
+
+.chart_css_child{
+    margin-top: 10vh;
+        border: 2px solid #38015c;
+        width: 70%;
+        height: 70%;
+}

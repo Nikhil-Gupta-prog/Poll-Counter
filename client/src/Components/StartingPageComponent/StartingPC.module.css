@@ -1,0 +1,84 @@
+.main_home {
+  overflow: hidden;
+}
+.parent_box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-image: url("../../Assests/home_back.webp"); */
+  background-size: 100% 100%;
+}
+
+.child_box {
+  width: 8em;
+  margin: 0 ;
+  color: #000;
+  
+  border-right: 1px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 3s steps(11) 1s 1 normal both,
+  blinkTextCursor 400ms steps(11) normal;
+}
+
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 31em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent !important;
+   
+  }
+}
+.child_box h1 {
+  font-size: 4rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.btn {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #38015c;
+  border-radius: 28px;
+  padding: 2px 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #2c6696;
+  color: #fff;
+}
+.home_login {
+  margin-top: 1em;
+  font-size: 1em;
+  color: #000;
+}
+.home_login_link {
+  margin: 0.3em;
+}
+
+@media screen and (max-width: 425px) {
+  .child_box {
+    width: 8em;
+    color: #000;
+    
+    
+  }
+  
+  .child_box h1 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
