@@ -13,3 +13,13 @@
         width: 70%;
         height: 70%;
 }
+
+@media screen and (max-width: 425px) {
+    .chart_css_child{
+        margin-top: 10vh;
+            border: 2px solid #38015c;
+            width: 94%;
+            height: auto;
+    }
+
+}

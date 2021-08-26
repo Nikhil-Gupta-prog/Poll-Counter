@@ -3,29 +3,32 @@
     justify-content: center;
     align-items: center;
   
-   margin-top: 1vh;
-
+   margin-top: 0.8vh;
+   
 }
 
 
 .childPoll{
-    width: 80vw;
-   
-   
+    width: 70vw;
+    height: 49vh;
+   border: 1px solid;
+   border-radius: 10px;
+   box-sizing: border-box;
+   box-shadow: 3px 6px 24px rgb(0 0 0 / 30%);
+   background-color: azure;
 
 }
+
 
 .childPoll_child{
     width: 90%;
     height: 77px;
-    border: 1px solid;
-    margin-top: 10px;
-    box-sizing: border-box;
-    box-shadow: 3px 6px 24px rgb(0 0 0 / 30%);
-    background-color: azure;
+   
+    margin-top: 8px;
+   
 
 }
-.childPoll_child:hover{
+.childPoll:hover{
     border: 2px solid #38015c ;
 }
 h3{
@@ -37,9 +40,9 @@ h3{
 }
 
 @media screen and (max-width: 774px) {
-    .childPoll_child{
-        width: 100%;
-        height: 77px;
+    .childPoll{
+        width: 90%;
+        height: 477px;
         border: 1px solid;
         margin-top: 10px;
         box-sizing: border-box;
@@ -47,7 +50,66 @@ h3{
         background-color: azure;
         font-size: 1.7em;
     }
+    .buttonForm{
+        background-color: #2d166e;
+        color: #fff;
+        font-size: 1.2em;
+        border-radius: 10px;
+        padding: 2px;
+        margin: 10px 0;
+    }
 
+}
+
+@media screen and (max-width: 995px) {
+    .childPoll{
+        width: 90%;
+        height: 537px;
+        border: 1px solid;
+        margin-top: 10px;
+        box-sizing: border-box;
+        box-shadow: 3px 6px 24px rgb(0 0 0 / 30%);
+        background-color: azure;
+        font-size: 1.7em;
+    }
+    .buttonForm{
+        background-color: #2d166e;
+        color: #fff;
+        font-size: 1.2em;
+        border-radius: 10px;
+        padding: 2px;
+        margin: 10px 0;
+    }
+
+}
+
+
+.parentFormDiv{
+    margin-top: 10px;
+    padding: 10px;
+}
+h4{
+    padding: 1em;
+}
+.childFormDiv{
+    padding: 7px;
+    margin: 4px 0;
+}
+.childFormDiv input{
+    margin: 0 10px;
+}
+
+.buttonForm{
+    background-color: #2d166e;
+    color: #fff;
+    font-size: 1.4em;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 10px 0;
+}
+.buttonForm:hover{
+    color: #fff;
+    background-color: #38015c;
 }
 
 @media screen and (max-width: 425px) {
@@ -55,9 +117,9 @@ h3{
         width: 100vw;      
     
     }
-    .childPoll_child{
-        width: 100%;
-        height: 77px;
+    .childPoll{
+        width: 90%;
+        height: 477px;
         border: 1px solid;
         margin-top: 10px;
         box-sizing: border-box;
@@ -71,6 +133,14 @@ h3{
     }
     .childPoll_child h1{
         font-size: 23px;
+    }
+    .buttonForm{
+        background-color: #2d166e;
+        color: #fff;
+        font-size: 1em;
+        border-radius: 10px;
+        padding: 2px;
+        margin: 10px 0;
     }
 
 }

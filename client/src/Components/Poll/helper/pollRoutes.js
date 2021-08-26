@@ -1,15 +1,6 @@
 import { API } from "../../../backend";
 
 
-export const PollList = () =>{
-    return fetch('http://127.0.0.1:8000/api/votes',{
-        method:"GET"
-    })
-    .then((response) => {
-        return response.json();
-      })
-      .catch(err => console.log(err));
-}
 
 export const PollResult = poll => {
     return fetch(' http://127.0.0.1:8000/api/votes', {
@@ -25,6 +16,8 @@ export const PollResult = poll => {
     })
       .then(response => {
         return response.json();
+      
+
       })
       .catch(err => console.log(err));
   };

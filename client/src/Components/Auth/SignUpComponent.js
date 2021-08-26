@@ -40,7 +40,7 @@ const Signup = () => {
             error: "",
             success: true,
           });
-          history.push('/poll')
+          history.push('/signin')
         }
       })
       .catch(console.log("Error in signup"));
@@ -74,7 +74,7 @@ const Signup = () => {
             <input
               onChange={handleChange("phone")}
               id="number"
-              type="number"
+              type="text"
               value={phone}
             />
             </div>
@@ -110,14 +110,14 @@ const Signup = () => {
 
   const successMessage = () => {
     return (
-      <div className="row">
+      <div className="row mt-4">
         <div className="col-md-6 offset-sm-3 text-left">
           <div
             className="alert alert-success"
             style={{ display: success ? "" : "none" }}
           >
             New account was created successfully. Please
-            <Link to="/">Login Here</Link>
+            <Link to="/signin">Login Here</Link>
           </div>
         </div>
       </div>
@@ -126,8 +126,8 @@ const Signup = () => {
 
   const errorMessage = () => {
     return (
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+      <div className={classes.error_msg_parent}>
+        <div className={classes.error_msg_child}>
           <div
             className="alert alert-danger"
             style={{ display: error ? "" : "none" }}
@@ -138,6 +138,7 @@ const Signup = () => {
       </div>
     );
   };
+
 
   return (
     <div>

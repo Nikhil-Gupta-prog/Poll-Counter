@@ -11,13 +11,24 @@
 .list{
     list-style: none;
   
-  
-   
+}
+.emptyList{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.emptyList_line{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .all_list{
     
-    margin-top: 11vh;
+    margin-top: 8vh;
     
 }
 

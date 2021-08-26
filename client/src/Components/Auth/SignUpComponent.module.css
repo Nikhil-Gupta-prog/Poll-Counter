@@ -1,5 +1,5 @@
 .auth {
-    margin: 3rem auto;
+    margin: 2rem auto;
     width: 95%;
     max-width: 25rem;
     border-radius: 16px;
@@ -72,3 +72,17 @@
     background-color: transparent;
     color: #ae82cc;
   }
+
+.error_msg_parent{
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.loading_div{
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,5 +1,9 @@
 import React from "react";
 import "./ProfileCart.css";
+import GitHubIcon from '@material-ui/icons/GitHub';
+import EmailIcon from '@material-ui/icons/Email';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+
 
 const ProfileCard = (props) => {
   return (
@@ -12,17 +16,24 @@ const ProfileCard = (props) => {
         />
         <h5 class="darkTitle card-title">{props.name}</h5>
         <h6 class="darkSubTitle card-subtitle">{props.profile}</h6>
-        
+
         <div className="social">
-            <span>Twitter</span>
-            <span>Linkedin</span>
-            <span>Medium</span>
-            <span>email</span>
-
-
-
+          <span className="social_media_icon">
+            <a  href={props.github}>
+            <GitHubIcon className="icon" />
+            </a>
+          </span>
+          <span className="social_media_icon">
+            <a href={props.email}>
+            <EmailIcon className="icon" />
+            </a>
+          </span>
+          <span className="social_media_icon">
+            <a href={props.linkedin}>
+            <LinkedInIcon  className="icon" />
+            </a>
+          </span>
         </div>
-       
       </div>
     </div>
   );

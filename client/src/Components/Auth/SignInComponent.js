@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import classes from  "./SignUpComponent.module.css";
+import LoadingSpinner from "../UI/LoadingSpinner";
 
 
 import { Redirect,Link } from "react-router-dom";
 
-import { signin, authenticate, isAutheticated } from "./helper/authRoutes";
+import { signin, authenticate } from "./helper/authRoutes";
 
 const Signin = () => {
   const [values, setValues] = useState({
@@ -16,7 +17,7 @@ const Signin = () => {
   });
 
   const { email, password, error, loading, didRedirect } = values;
-  const { user } = isAutheticated();
+  // const { user } = isAutheticated();
 
   const handleChange = name => event => {
     setValues({ ...values, error: false, [name]: event.target.value });
@@ -53,8 +54,8 @@ const Signin = () => {
   const loadingMessage = () => {
     return (
       loading && (
-        <div className="alert alert-info">
-          <h2>Loading...</h2>
+        <div className={classes.loading_div}>
+         <LoadingSpinner />
         </div>
       )
     );
@@ -62,8 +63,8 @@ const Signin = () => {
 
   const errorMessage = () => {
     return (
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+      <div className={classes.error_msg_parent}>
+        <div className={classes.error_msg_child}>
           <div
             className="alert alert-danger"
             style={{ display: error ? "" : "none" }}

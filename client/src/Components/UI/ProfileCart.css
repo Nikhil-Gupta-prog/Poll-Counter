@@ -1,9 +1,7 @@
 
 
 
-.parentCard{
-    border: 1px solid;
-}
+
 .proPic {
     height: 140px;
     width: 140px;
@@ -14,7 +12,7 @@
   }
   
   .proDark {
-    border: 1px solid white;
+    border: 1px solid rgb(36, 18, 116);
   }
   
   .proLight {
@@ -27,9 +25,10 @@
   }
   
   .darkCard {
-    background-color: #25235c;
+     background-color: #d0d0dd; 
     margin: 20px auto;
     width: 380px;
+    border: 1px solid #25235c ;
   }
   
   .lightCard {
@@ -38,7 +37,7 @@
   
   .darkTitle {
     margin-top: 10px;
-    color: #ebecf5;
+    color:  #25235c;
     text-align: center;
   }
   
@@ -97,9 +96,26 @@
     text-align: center;
     margin-bottom: 30px;
   }
+  .social_media_icon{
+    margin: 4px 10px;
+   
+  }
+  .social_media_icon .icon{
+    font-size: 40px;
+    color:  #25235c;
+  }
   
   .attributeText {
     margin-top: 20px;
     text-align: center;
     color: #25235c;
   }
+
+@media screen and (max-width: 769px) {
+  .darkCard {
+   background-color: #d0d0dd; 
+   margin: 20px 0;
+   width: 270px;
+   border: 1px solid #25235c ;
+ }
+}
